@@ -1,0 +1,18 @@
+/home/linwei/clion-2018.1.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/linwei/projects/acc
+-- OpenACC CXX compiler found
+-- OpenACC C Compiler found
+-- OpenACC C FLAGS: -fopenacc
+-- OpenACC CXX FLAGS: -fopenacc
+-- CMAKE_CXX_FLAGS: 
+-- OpenACC C version: 2.0
+-- OpenACC CXX version: 2.0
+-- OpenMP CXX found
+-- OpenMP C found
+-- OpenMP_CXX_FLAGS -fopenmp
+-- OpenMP_C_FLAGS -fopenmp
+-- CMAKE_CXX_FLAGS:  -fopenacc -fopenmp
+-- CMAKE_C_FLAGS:  -fopenacc -fopenmp
+-- /usr/lib/gcc/x86_64-linux-gnu/7/libgomp.so;/usr/lib/x86_64-linux-gnu/libpthread.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/linwei/projects/acc/cmake-build-debug

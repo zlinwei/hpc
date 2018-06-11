@@ -1,0 +1,1 @@
+/usr/bin/c++   -fopenacc -fopenmp -g   CMakeFiles/acc.dir/main.cpp.o  -o acc 
