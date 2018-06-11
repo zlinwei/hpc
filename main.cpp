@@ -1,12 +1,14 @@
 #include <iostream>
 #include <openacc.h>
 #include <omp.h>
+#include <mpi.h>
 
 #include <cstdio>
 
 int main() {
     std::cout << "acc device num: " << acc_get_device_num(acc_device_host) << std::endl;
     std::cout << "omp max threads: " << omp_get_max_threads() << std::endl;
+
 
 #pragma omp parallel
     {

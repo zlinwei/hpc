@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(acc LANGUAGES CXX)
+project(acc LANGUAGES C CXX)
 
 option(use_OpenACC "use OpenACC" ON)
 option(use_OpenMP "use OpenMP" ON)
@@ -68,6 +68,13 @@ message(STATUS "CMAKE_C_FLAGS: ${CMAKE_C_FLAGS}")
 
 
 message(STATUS "${OpenMP_CXX_LIBRARIES}")
+
+
+# OpenMPI
+if (${use_OpenMPI})
+    find_package(MPI REQUIRED)
+endif ()
+
 
 add_executable(acc main.cpp)
 target_link_libraries(acc)
