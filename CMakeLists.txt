@@ -5,6 +5,12 @@ option(use_OpenACC "use OpenACC" ON)
 option(use_OpenMP "use OpenMP" ON)
 option(use_OpenMPI "use OpenMPI" ON)
 
+option(use_GPU "use GPU" OFF)
+
+if (${use_GPU})
+    add_definitions(-DUSE_GPU)
+endif ()
+
 # OpenACC
 if (${use_OpenACC})
     add_definitions(-DUSE_OPENACC)
@@ -25,6 +31,12 @@ if (${use_OpenACC})
 
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenACC_C_FLAGS}")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenACC_CXX_FLAGS}")
+
+    if (${use_GPU})
+    else ()
+        #        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ta=multicore")
+    endif ()
+
 endif (${use_OpenACC})
 
 
