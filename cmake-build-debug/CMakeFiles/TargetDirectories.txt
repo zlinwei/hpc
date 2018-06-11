@@ -1,3 +1,0 @@
-/home/linwei/projects/acc/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/linwei/projects/acc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/linwei/projects/acc/cmake-build-debug/CMakeFiles/acc.dir
