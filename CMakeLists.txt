@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 3.10)
-project(acc LANGUAGES C CXX)
+project(acc LANGUAGES CXX)
 
 option(use_OpenACC "use OpenACC" ON)
 option(use_OpenMP "use OpenMP" ON)
 option(use_OpenMPI "use OpenMPI" ON)
 
 option(use_GPU "use GPU" OFF)
+
+message(STATUS "${CMAKE_CXX_COMPILER}")
+message(STATUS "${CMAKE_CXX_COMPILER_ID}")
 
 if (${use_GPU})
     add_definitions(-DUSE_GPU)
