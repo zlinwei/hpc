@@ -10,6 +10,9 @@ option(use_GPU "use GPU" OFF)
 message(STATUS "${CMAKE_CXX_COMPILER}")
 message(STATUS "${CMAKE_CXX_COMPILER_ID}")
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -O3 -fPIC")
+set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -pthread -O3 -fPIC")
+
 if (${use_GPU})
     add_definitions(-DUSE_GPU)
 endif ()
